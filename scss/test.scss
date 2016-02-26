@@ -12,10 +12,18 @@ $margin: 0 auto;
 $overflow: auto;
 
 //extends
-%image {
-  max-width: 100%;
-  display: block;
+// %image {
+//   max-width: 100%;
+//   display: block;
+// }
+//mixins
+@mixin image($width, $display) {
+  max-width: $width;
+  display: $display;
 }
+
+
+
 //scss
 .container {
   width: 95%;
@@ -27,20 +35,38 @@ $overflow: auto;
 
 .columns {
   margin: $margin;
+  @media screen and (min-width: 600px){
+    width: 49%;
+    float: left;
+    margin: 1% 1% 1% 0;
+  }
+  @media screen and (min-width: 1000px){
+      width: 24%;
+  }
   img {
-    @extend %image;
- }
+    @include image(100%, block);
+  }
 }
 
 .nav {
   #logo {
-    /*float: left;*/
+    @media screen and (min-width: 600px){
+      float: left;
+    }
   }
   ul {
     /*float: right;*/
     list-style-type: none;
-    overflow: auto;
+    overflow: $overflow;
     padding-left: 0;
+    @media screen and (min-width: 600px){
+      float: right;
+      width: 30%;
+      margin-top: 20px;
+    }
+    @media screen and (min-width: 1000px) {
+      width: 25%;
+    }
   }
   li {
     color: purple;
@@ -53,35 +79,35 @@ $overflow: auto;
   clear: both;
   width: 100%;
   padding-left: 3%;
-  border: 1px solid red;
   margin-bottom: 10px;
+  // @include box (10px, blue);
 }
 
 
 /* MEDIA QUERIES ------------ */
 
-@media screen and (min-width: 600px) {
-  #logo {
-    float: left;
-  }
-  ul {
-    float: right;
-    width: 30%;
-    margin-top: 20px;
-  }
-  .columns {
-    width: 49%;
-    float: left;
-    margin: 1% 1% 1% 0;
-  }
+// @media screen and (min-width: 600px) {
+//   #logo {
+//     float: left;
+//   }
+//   ul {
+//     float: right;
+//     width: 30%;
+//     margin-top: 20px;
+//   }
+//   .columns {
+//     width: 49%;
+//     float: left;
+//     margin: 1% 1% 1% 0;
+//   }
+//
+// }
 
-}
-
-@media screen and (min-width: 1000px) {
-  .columns {
-    width: 24%;
-  }
-  ul {
-    width: 25%;
-  }
-}
+// @media screen and (min-width: 1000px) {
+//   .columns {
+//     width: 24%;
+//   }
+//   ul {
+//     width: 25%;
+//   }
+// }
