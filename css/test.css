@@ -8,6 +8,9 @@
 body {
   background-color: #e8e08c; }
 
+h1, p, li {
+  color: #2D2B2C; }
+
 .container {
   width: 95%;
   margin: 0 auto;

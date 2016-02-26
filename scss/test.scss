@@ -33,9 +33,16 @@ body {
   background-color: $yellow;
   // background: linear-gradient($lime, transparent 60%), linear-gradient(0deg, $cream, transparent 10%);
 }
-.header {
 
-}
+  h1, p, li {
+    color: #2D2B2C;
+    // text-shadow: 2px 2px 2px complement($yellow);
+  }
+// header {
+//   img {
+//     border-radius: 2px;
+//   }
+// }
 .container {
   width: 95%;
   margin: $margin;
