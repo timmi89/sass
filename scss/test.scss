@@ -1,0 +1,87 @@
+@import "../bourbon/bourbon";
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+//variables
+$margin: 0 auto;
+$overflow: auto;
+
+//extends
+%image {
+  max-width: 100%;
+  display: block;
+}
+//scss
+.container {
+  width: 95%;
+  margin: $margin;
+  .content {
+    overflow: $overflow;
+  }
+}
+
+.columns {
+  margin: $margin;
+  img {
+    @extend %image;
+ }
+}
+
+.nav {
+  #logo {
+    /*float: left;*/
+  }
+  ul {
+    /*float: right;*/
+    list-style-type: none;
+    overflow: auto;
+    padding-left: 0;
+  }
+  li {
+    color: purple;
+    display: inline;
+    padding-right: 3%;
+  }
+}
+
+.header {
+  clear: both;
+  width: 100%;
+  padding-left: 3%;
+  border: 1px solid red;
+  margin-bottom: 10px;
+}
+
+
+/* MEDIA QUERIES ------------ */
+
+@media screen and (min-width: 600px) {
+  #logo {
+    float: left;
+  }
+  ul {
+    float: right;
+    width: 30%;
+    margin-top: 20px;
+  }
+  .columns {
+    width: 49%;
+    float: left;
+    margin: 1% 1% 1% 0;
+  }
+
+}
+
+@media screen and (min-width: 1000px) {
+  .columns {
+    width: 24%;
+  }
+  ul {
+    width: 25%;
+  }
+}
