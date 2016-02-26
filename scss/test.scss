@@ -10,7 +10,11 @@
 //variables
 $margin: 0 auto;
 $overflow: auto;
-
+$lime: #8AB85B;
+$cream: #F0ECE1;
+$green :darken($lime, 20%);
+$dark-purple: complement($green);
+$yellow: desaturate(#EFE685, 10%);
 //extends
 // %image {
 //   max-width: 100%;
@@ -25,6 +29,13 @@ $overflow: auto;
 
 
 //scss
+body {
+  background-color: $yellow;
+  // background: linear-gradient($lime, transparent 60%), linear-gradient(0deg, $cream, transparent 10%);
+}
+.header {
+
+}
 .container {
   width: 95%;
   margin: $margin;
@@ -46,11 +57,19 @@ $overflow: auto;
   }
   img {
     @include image(100%, block);
+    border-radius: 3px;
+    &:hover{
+    border: 3px solid $lime;
+   }
   }
+  h3 {
+    color: complement($yellow);
+   }
 }
 
 .nav {
   #logo {
+    color: $green;
     @media screen and (min-width: 600px){
       float: left;
     }
@@ -70,8 +89,13 @@ $overflow: auto;
     }
   }
   li {
+    border-radius: 2px;
     display: inline;
     padding-right: 3%;
+    &:hover {
+      text-decoration: underline;
+      background-color: $lime;
+    }
   }
 }
 
@@ -82,8 +106,17 @@ $overflow: auto;
   margin-bottom: 10px;
   // @include box (10px, blue);
 }
-
-
+.lower {
+  width: 49%;
+  img {
+    float:left;
+    @include image(100%, block);
+    border-radius: 3px;
+    &:hover{
+    border: 3px solid $lime;
+  }
+}
+}
 /* MEDIA QUERIES ------------ */
 
 // @media screen and (min-width: 600px) {
