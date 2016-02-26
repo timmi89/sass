@@ -7,7 +7,8 @@
 
 .container {
   width: 95%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  font-family: "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif; }
   .container .content {
     overflow: auto; }
 
@@ -42,7 +43,6 @@
     .nav ul {
       width: 25%; } }
 .nav li {
-  color: purple;
   display: inline;
   padding-right: 3%; }
 

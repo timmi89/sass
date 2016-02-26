@@ -28,6 +28,7 @@ $overflow: auto;
 .container {
   width: 95%;
   margin: $margin;
+  font-family: $lucida-grande;
   .content {
     overflow: $overflow;
   }
@@ -69,7 +70,6 @@ $overflow: auto;
     }
   }
   li {
-    color: purple;
     display: inline;
     padding-right: 3%;
   }
