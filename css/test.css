@@ -13,6 +13,7 @@ h1, p, li {
 
 .container {
   width: 95%;
+  padding-left: 10px;
   margin: 0 auto;
   font-family: "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif; }
   .container .content {
@@ -31,14 +32,15 @@ h1, p, li {
   .columns img {
     max-width: 100%;
     display: block;
+    border: 3px solid #F0ECE1;
     border-radius: 3px; }
     .columns img:hover {
       border: 3px solid #8AB85B; }
   .columns h3 {
-    color: #8c94e8; }
+    color: #563479; }
 
 .nav #logo {
-  color: #577934; }
+  color: #563479; }
   @media screen and (min-width: 600px) {
     .nav #logo {
       float: left; } }

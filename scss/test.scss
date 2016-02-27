@@ -31,7 +31,7 @@ $yellow: desaturate(#EFE685, 10%);
 //scss
 body {
   background-color: $yellow;
-  // background: linear-gradient($lime, transparent 60%), linear-gradient(0deg, $cream, transparent 10%);
+//       background: linear-gradient($yellow, transparent 150%), linear-gradient(0deg, $cream, transparent 70%), url("../images/bulb.jpg") center;
 }
 
   h1, p, li {
@@ -45,6 +45,7 @@ body {
 // }
 .container {
   width: 95%;
+  padding-left: 10px;
   margin: $margin;
   font-family: $lucida-grande;
   .content {
@@ -64,19 +65,20 @@ body {
   }
   img {
     @include image(100%, block);
+    border: 3px solid $cream;
     border-radius: 3px;
     &:hover{
     border: 3px solid $lime;
    }
   }
   h3 {
-    color: complement($yellow);
+    color: $dark-purple;
    }
 }
 
 .nav {
   #logo {
-    color: $green;
+    color: $dark-purple;
     @media screen and (min-width: 600px){
       float: left;
     }
